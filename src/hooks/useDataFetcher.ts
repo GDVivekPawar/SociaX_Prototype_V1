@@ -61,7 +61,8 @@ export function useDataFetcher() {
         });
       }
     } catch {
-      const response = await fetch(`/real_telegram_data.json?t=${Date.now()}`);
+      const replayUrl = `${import.meta.env.BASE_URL}real_telegram_data.json?t=${Date.now()}`;
+      const response = await fetch(replayUrl);
       if (!response.ok) throw new Error(`API and replay unavailable (${response.status})`);
       const posts: Post[] = await response.json();
       setState({ posts, lastFetchTime: Date.now(), isLive: false, status: 'REPLAY / DEMO', error: null, sourceCounts: { telegram: posts.length }, lastIngestion: null, sourceStatuses: {} });
