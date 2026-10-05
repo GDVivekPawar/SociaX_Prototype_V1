@@ -1,0 +1,35 @@
+{
+  "name": "sociax",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 4000",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "poller": "python poller.py",
+    "demo": "npm run dev",
+    "backend": "python backend/server.py",
+    "ingest": "python poller.py",
+    "dev:full": "concurrently -k -n frontend,backend,ingest -c cyan,green,yellow \"npm run dev\" \"npm run backend\" \"npm run ingest\""
+  },
+  "dependencies": {
+    "framer-motion": "^12.43.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-force-graph-2d": "^1.26.3",
+    "recharts": "^2.15.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}

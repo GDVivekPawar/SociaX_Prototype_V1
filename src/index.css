@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #F7F8FA;
+  color: #1E293B;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.page-container {
+  @apply max-w-7xl mx-auto px-8 py-8;
+}
+
+.content-grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.card {
+  @apply bg-white rounded-lg border border-slate-200 shadow-sm;
+}
+
+.card-elevated {
+  @apply bg-white rounded-lg border border-slate-200 shadow-md;
+}
+
+/* Hero card for What-If Simulator */
+.card-hero {
+  @apply bg-white rounded-xl border-2 border-amber-200 shadow-lg;
+  background: linear-gradient(135deg, #FFFBEB 0%, #FFFFFF 40%);
+}
+
+/* Synthetic cluster styling */
+.synthetic-cluster {
+  @apply border-dashed border-slate-300 bg-slate-50;
+}
+
+/* ============================================
+   SENTIMENT BADGES
+   ============================================ */
+.badge {
+  @apply px-2.5 py-1 rounded-full text-xs font-medium inline-block;
+}
+
+.badge-neutral {
+  @apply bg-slate-100 text-slate-600;
+}
+
+.badge-anger {
+  @apply bg-red-50 text-red-700;
+}
+
+.badge-support {
+  @apply bg-emerald-50 text-emerald-700;
+}
+
+.badge-concern {
+  @apply bg-amber-50 text-amber-700;
+}
+
+.badge-sarcasm {
+  @apply bg-purple-50 text-purple-700;
+}
+
+/* ============================================
+   TRANSITIONS
+   ============================================ */
+.data-transition {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ============================================
+   CHAT PANEL
+   ============================================ */
+.chat-message {
+  @apply rounded-lg px-3 py-2 text-sm leading-relaxed max-w-[85%];
+}
+
+.chat-user {
+  @apply bg-slate-100 text-slate-800 ml-auto;
+}
+
+.chat-bot {
+  @apply bg-white border border-slate-200 text-slate-700 mr-auto;
+}
+
+/* Section accent colors — muted, editorial, not neon */
+.accent-bar {
+  @apply border-l-[3px] pl-4;
+}
+
+.accent-navy {
+  border-color: #1E3A5F;
+}
+
+.accent-teal {
+  border-color: #0F766E;
+}
+
+.accent-terracotta {
+  border-color: #C2410C;
+}
+
+.accent-amber {
+  border-color: #B45309;
+}
+
+.section-label {
+  @apply text-[11px] font-semibold uppercase tracking-wider mb-1;
+}
+
+.label-navy {
+  color: #1E3A5F;
+}
+
+.label-teal {
+  color: #0F766E;
+}
+
+.label-terracotta {
+  color: #C2410C;
+}
